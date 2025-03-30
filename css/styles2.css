@@ -1,0 +1,47 @@
+/* WhatsApp Widget Styles */
+#whatsapp-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whatsapp-bubble {
+    position: absolute;
+    right: 70px; /* Adjust position as needed */
+    bottom: 0;
+    background-color: #ffffff; /* White background for bubble */
+    color: #000000; /* Black text color */
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    display: none; /* Hide initially */
+}
+
+.whatsapp-link img {
+    width: 60px; /* Adjust the size of the WhatsApp icon */
+    height: auto;
+    border-radius: 50%; /* Make the icon circular */
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-link img:hover {
+    transform: scale(1.1); /* Scale up the icon on hover */
+}
+
+/* Typing Animation */
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 2s steps(20, end);
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
