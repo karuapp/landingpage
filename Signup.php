@@ -282,7 +282,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
                                     <!-- SIMPLE NAVIGATION LINK -->
                                     <li class="nl-simple" aria-haspopup="true"><a href="pricing.php" class="h-link"><?php echo $textos['Price']; ?></a></li>
                                     <!-- SIMPLE NAVIGATION LINK -->
-                                    <li class="nl-simple" aria-haspopup="true"><a href="/doc/index.php" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
+                                    <li class="nl-simple" aria-haspopup="true"><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
                                     <!-- SIGN IN LINK -->
                                     <li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
                                         <a href="<?php echo $config['domain_app']; ?>" class="h-link" target="_blank"><?php echo $textos['Login']; ?></a>
@@ -346,7 +346,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
                                             <p class="p-md mt-25"><?php echo $textos['login2']; ?></p>
 
                                             <!-- Text -->
-                                            <p class="p-md mt-25">Integer congue sagittis and velna augue egestas magna suscipit purus aliquam
+                                            <p class="p-md mt-25">Lleva tu negocio al siguiente nivel con el CRM de WhatsApp mas completo y con todo el poder de la Inteligencia Artificial a tu Disposicion
                                             </p>
 
                                             <!-- Copyright -->
@@ -394,6 +394,9 @@ li[aria-haspopup="true"]:hover .sub-menu {
                                                 <div class="col-md-12">
                                                     <p class="p-sm input-header" for="whatsapp"><?php echo $textos['login26']; ?></p>
                                                     <input class="form-control" type="text" id="whatsapp" name="whatsapp" placeholder="Ej: 001234567890" required>
+                                                    <small id="whatsappError" style="color: red; display: none;">
+                                                        Debes poner el número de área de tu país sin el signo + Ejemplo 573160497130
+                                                    </small>
                                                 </div>
 
                                                 <div class="col-md-12">
@@ -503,6 +506,25 @@ li[aria-haspopup="true"]:hover .sub-menu {
                     warningText.style.display = checkbox.checked ? "inline" : "none";
                 }
             </script>
+            <script>
+                document.getElementById('whatsapp').addEventListener('input', function () {
+                    const input = this.value;
+                    const errorMsg = document.getElementById('whatsappError');
+
+                    // Validación: sin "+" y mínimo 11 dígitos
+                    const hasPlus = input.includes('+');
+                    const onlyDigits = input.replace(/\D/g, '');
+                    const isValid = !hasPlus && onlyDigits.length >= 11;
+
+                    if (!isValid) {
+                        errorMsg.style.display = 'block';
+                        this.style.borderColor = 'red';
+                    } else {
+                        errorMsg.style.display = 'none';
+                        this.style.borderColor = '';
+                    }
+                });
+                </script>
 
 
         <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->                                                         

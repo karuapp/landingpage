@@ -151,7 +151,7 @@ $config = include('config.php');
 								    <!-- SIMPLE NAVIGATION LINK -->
 							    	<li class="nl-simple" aria-haspopup="true"><a href="pricing.php" class="h-link"><?php echo $textos['Price']; ?></a></li>
 						          	<!-- SIMPLE NAVIGATION LINK -->
-							    	<li class="nl-simple" aria-haspopup="true"><a href="/doc/index.php" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
+							    	<li class="nl-simple" aria-haspopup="true"><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
 							    	<!-- SIGN IN LINK -->
 							    	<li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
 							    		<a href="<?php echo $config['domain_app']; ?>" class="h-link" target="_blank"><?php echo $textos['Login']; ?></a>
@@ -218,11 +218,25 @@ $config = include('config.php');
 										<h5 class="s-24 w-700"><?php echo $config['plan1name']; ?></h5>
 										<!-- Price -->	
 										<div class="price">								
-											<sup class="color--black"><?php echo $config['moneda']; ?></sup>								
-											<span class="color--black"><?php echo $config['plan1price']; ?></span>
-											<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price5']; ?></sup>
-											<p class="color--grey"><?php echo $textos['price6']; ?></p>
-										</div>
+											<!-- Monthly Price -->	
+											<div class="price2">
+												<sup class="color--black"><?php echo $config['moneda']; ?></sup>								
+												<span class="color--black"><?php echo $config['plan2price']; ?></span>
+												<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price24']; ?></sup>
+											</div>
+											<!-- Yearly Price -->	
+											<div class="price1">
+												<sup class="color--black"><?php echo $config['moneda']; ?></sup>								
+												<span class="color--black"><?php echo $config['plan2priceanual']; ?></span>
+												<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price19']; ?></sup>
+												<!-- Discount Badge -->
+												<div class="pricing-discount bg--yellow-400 color--black r-36">
+													<h6 class="s-17"><?php echo $textos['price20']; ?></h6>
+												</div>
+											</div>
+											<!-- Text -->	
+											<p class="color--grey"><?php echo $textos['price21']; ?></p>
+										</div>	<!-- End Price -->	
 										<!-- Button -->
 										<a href="#" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price8']; ?></a>
 										<p class="p-sm btn-txt text-center color--grey"><?php echo $textos['price9']; ?></p>
@@ -618,7 +632,7 @@ $config = include('config.php');
 								<ul class="foo-links clearfix">
 									<li><p><a href="#features-6"><?php echo $textos['footer4']; ?></a></p></li>	
 									<li><p><a href="pricing.php"><?php echo $textos['footer5']; ?></a></p></li>	
-									<li><p><a href="/doc/index.php" target="_blank"><?php echo $textos['footer6']; ?></a></p></li>			
+									<li><p><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/" target="_blank"><?php echo $textos['footer6']; ?></a></p></li>			
 								</ul>
 							</div>	
 						</div>	<!-- END FOOTER LINKS -->	

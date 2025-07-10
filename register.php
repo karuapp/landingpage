@@ -1,10 +1,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $url = "https://api.whatsappworks.com/tenantApiStoreTenant";
-    $whatsapp_api_url = "https://api.whatsappworks.com/v2/api/external/ac1531c5-9bd9-49da-9604-f4252e566911";
+    $url = "https://api2.wabotify.com/tenantApiStoreTenant";
+    $whatsapp_api_url = "https://api2.wabotify.com/v2/api/external/e9f53ce8-d7ce-4773-8856-fefda4fa2219";
 
     $headers = [
-        "Authorization: Bearer Z(KvRK}Kkadt2PX*&.n2p955Nk&]>;=A(()WDPW*07{s[Qf",
+        "Authorization: Bearer wabotify1", //token de api super admin
         "Content-Type: application/json"
     ];
 
@@ -52,19 +52,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($http_code == 200) {
         // Si el registro es exitoso, enviar mensaje de WhatsApp
         if (!empty($whatsappNumber)) {
-    $message = "📢 *Bienvenido a WhatsappWorks!* 🎉\n\n";
+    $message = "📢 *Bienvenido a WaBotify!* 🎉\n\n";
     $message .= "🟢 *Nombre de la empresa:* $name\n";
     $message .= "👤 *Nombre de usuario:* $userName\n";
     $message .= "📧 *Correo electrónico:* $email\n";
     $message .= "📱 *Número de WhatsApp:* $whatsappNumber\n\n";
+    $message .= "📓 *Documentacion para Usuarios:*\nhttps://crm-whatsapp.gitbook.io/crm-whatsapp/\n\n";
     $message .= "🤝 ¡Gracias por unirte!\n\n";
-    $message .= "*Equipo WhatsappWorks* 🚀";
+    $message .= "*Equipo WaBotify* 🚀";
 
     $whatsapp_data = [
         "body" => $message, // No usar urlencode aquí
         "number" => $whatsappNumber,
         "externalKey" => uniqid(),
-        "bearertoken" => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRJZCI6MSwicHJvZmlsZSI6ImFkbWluIiwic2Vzc2lvbklkIjoxNCwiaWF0IjoxNzQyNzczODMzLCJleHAiOjE4MDU4NDU4MzN9.TgnOAzPxssRZ5_GMtSuU3m2Ws7DlgSJzYAJoiOZX2T4",
+        "bearertoken" => "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5hbnRJZCI6MSwicHJvZmlsZSI6ImFkbWluIiwic2Vzc2lvbklkIjo4LCJpYXQiOjE3NDM2Mjc4MDgsImV4cCI6MTgwNjY5OTgwOH0.DACYaZRbLEHIVbNIhJUqXAOsHfCgTvZT-N-grv3jPKQ", //token de api whatsapp para envio de mensaje
         "isClosed" => false
     ];
 
@@ -77,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
         // Redirigir al usuario tras el registro exitoso
-        header("Location: https://chat2.marcablancasaas.com/");
+        header("Location: https://crm.wabotify.com/");
         exit();
     } else {
         echo "Error en el registro: " . $response;

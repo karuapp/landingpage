@@ -282,7 +282,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
                                     <!-- SIMPLE NAVIGATION LINK -->
                                     <li class="nl-simple" aria-haspopup="true"><a href="pricing.php" class="h-link"><?php echo $textos['Price']; ?></a></li>
                                     <!-- SIMPLE NAVIGATION LINK -->
-                                    <li class="nl-simple" aria-haspopup="true"><a href="/doc/index.php" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
+                                    <li class="nl-simple" aria-haspopup="true"><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
                                     <!-- SIGN IN LINK -->
                                     <li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
                                         <a href="<?php echo $config['domain_app']; ?>" class="h-link" target="_blank"><?php echo $textos['Login']; ?></a>

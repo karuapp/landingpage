@@ -277,11 +277,11 @@ li[aria-haspopup="true"]:hover .sub-menu {
 						   
 								    
 								    <!-- SIMPLE NAVIGATION LINK -->
-							    	<li class="nl-simple" aria-haspopup="true"><a href="#features-6" class="h-link"><?php echo $textos['Characteristics']; ?></a></li>
+							    	<li class="nl-simple" aria-haspopup="true"><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/caracteristicas-y-funciones/funciones-y-caracteristicas" class="h-link" target="_blank"><?php echo $textos['Characteristics']; ?></a></li>
 								    <!-- SIMPLE NAVIGATION LINK -->
 							    	<li class="nl-simple" aria-haspopup="true"><a href="pricing.php" class="h-link"><?php echo $textos['Price']; ?></a></li>
 						          	<!-- SIMPLE NAVIGATION LINK -->
-							    	<li class="nl-simple" aria-haspopup="true"><a href="/doc/index.php" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
+							    	<li class="nl-simple" aria-haspopup="true"><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/" class="h-link" target="_blank"><?php echo $textos['Documentation']; ?></a></li>
 							    	<!-- SIGN IN LINK -->
 							    	<li class="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
 							    		<a href="<?php echo $config['domain_app']; ?>" class="h-link" target="_blank"><?php echo $textos['Login']; ?></a>
@@ -523,67 +523,67 @@ li[aria-haspopup="true"]:hover .sub-menu {
 			</div>	<!-- END BRANDS-2 -->
 
 
-													<!-- BRANDS-3
-			============================================= -->
+													<!-- 
+			
 			<div id="brands-3" class="py-10 brands-section">
 				<div class="container">	
 
 
-					<!-- BRANDS CAROUSEL -->				
+								
 					<div class="row">
 						<div class="col text-center">	
 							<div class="owl-carousel brands-carousel-6">
 
 												
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-1.png" alt="brand-logo"></a>
 								</div>
 
 													
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-2.png" alt="brand-logo"></a>
 								</div>
 
 													
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-3.png" alt="brand-logo"></a>
 								</div>
 
 													
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-4.png" alt="brand-logo"></a>
 								</div>
 
 													
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-5.png" alt="brand-logo"></a>
 								</div>
 
 													
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-6.png" alt="brand-logo"></a>
 								</div>
 
 
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-7.png" alt="brand-logo"></a>
 								</div>
 
 															
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-8.png" alt="brand-logo"></a>
 								</div>
 
 								
-								<!-- BRAND LOGO IMAGE -->
+								
 								<div class="brand-logo">
 									<a href="#"><img class="img-fluid" src="images/brand-9.png" alt="brand-logo"></a>
 								</div>
@@ -591,7 +591,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 
 							</div>	
 						</div>
-					</div>  <!-- END BRANDS CAROUSEL -->
+					</div>  END BRANDS CAROUSEL -->
 
 
 				</div>	<!-- End container -->
@@ -601,16 +601,17 @@ li[aria-haspopup="true"]:hover .sub-menu {
 						<section id="features-6" class="py-100 features-section division">
     						<div class="container">
 
-							<div class="row justify-content-center">
-						            <div class="col-md-10 col-lg-9">
-						                <div class="section-title mb-70">
-						                    <!-- Title -->
-						                    <h4 class="s-50 w-700">Sacale el maximo provecho a WhatsApp con llamadas en <?php echo $textos['namesite']; ?></h4>
-						                    <!-- Text -->
-						                    <p class="s-18 color--grey">Mediante la integracion de WhaVoiP, realiza llamadas de whatsapp, nuestra alizanta te permitira muy rentable para sacarle aun mas provecho a <?php echo $textos['namesite']; ?> </p>
-						                </div>
-						            </div>
-						        </div>
+							
+						        <div class="row justify-content-center">
+                                                            <div class="col-md-10 col-lg-9">
+                                                                <div class="section-title mb-70">
+                                                                    <!-- Title -->
+                                                                    <h4 class="s-50 w-700">Potencia tus Llamadas de WhatsApp con Wavoip</h4>
+                                                                    <!-- Text -->
+                                                                    <p class="s-18 color--grey">Descubre cómo nuestra integración Wavoip te permite realizar llamadas de voz directamente desde <?php echo $textos['namesite']; ?>, facilitando la comunicación con tus clientes de manera práctica, rápida y sin salir de  <?php echo $textos['namesite']; ?>.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 								
 						<div class="row">
 						<div class="col">	
@@ -1023,7 +1024,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 								</p>
 								<!-- Link -->	
 								<div class="txt-block-tra-link mt-25">
-									<a href="https://app.CRM Whatsapp.com/signup" class="tra-link ico-20 color--theme"><?php echo $textos['maximatextaction']; ?>
+									<a href="<?php echo $config['domain_signup']; ?>" class="tra-link ico-20 color--theme"><?php echo $textos['maximatextaction']; ?>
 									 <span class="flaticon-next"></span>
 									</a>
 								</div>
@@ -1082,7 +1083,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 									</ul>
 									<!-- Link -->	
 									<div class="txt-block-tra-link mt-25">
-										<a href="https://app.CRM Whatsapp.com/signup" class="tra-link ico-20 color--theme"><?php echo $textos['bottext4']; ?>
+										<a href="<?php echo $config['domain_signup']; ?>" class="tra-link ico-20 color--theme"><?php echo $textos['bottext4']; ?>
 										 <span class="flaticon-next"></span>
 									</a>
 								</div>
@@ -1647,7 +1648,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 								<ul class="foo-links clearfix">
 									<li><p><a href="#features-6"><?php echo $textos['footer4']; ?></a></p></li>	
 									<li><p><a href="pricing.php"><?php echo $textos['footer5']; ?></a></p></li>	
-									<li><p><a href="/doc/index.php" target="_blank"><?php echo $textos['footer6']; ?></a></p></li>			
+									<li><p><a href="https://crm-whatsapp.gitbook.io/crm-whatsapp/" target="_blank"><?php echo $textos['footer6']; ?></a></p></li>			
 								</ul>
 							</div>	
 						</div>	<!-- END FOOTER LINKS -->	
