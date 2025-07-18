@@ -221,33 +221,34 @@ $config = include('config.php');
 											<!-- Monthly Price -->	
 											<div class="price2">
 												<sup class="color--black"><?php echo $config['moneda']; ?></sup>								
-												<span class="color--black"><?php echo $config['plan2price']; ?></span>
+												<span class="color--black"><?php echo $config['plan1price']; ?></span>
 												<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price24']; ?></sup>
 											</div>
 											<!-- Yearly Price -->	
 											<div class="price1">
 												<sup class="color--black"><?php echo $config['moneda']; ?></sup>								
-												<span class="color--black"><?php echo $config['plan2priceanual']; ?></span>
+												<span class="color--black"><?php echo $config['plan1priceanual']; ?></span>
 												<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price19']; ?></sup>
 												<!-- Discount Badge -->
 												<div class="pricing-discount bg--yellow-400 color--black r-36">
-													<h6 class="s-17"><?php echo $textos['price20']; ?></h6>
+													<h6 class="s-17"><?php echo $config['plan1descuento']; ?></h6>
 												</div>
 											</div>
 											<!-- Text -->	
 											<p class="color--grey"><?php echo $textos['price21']; ?></p>
-										</div>	<!-- End Price -->	
+										</div>	
+										<!-- End Price -->	
 										<!-- Button -->
-										<a href="#" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price8']; ?></a>
+										<a href="<?php echo $config['domain_app']; ?>" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price8']; ?></a>
 										<p class="p-sm btn-txt text-center color--grey"><?php echo $textos['price9']; ?></p>
 									</div>	<!-- END TABLE HEADER -->
 									<!-- PRICING FEATURES -->
 									<ul class="pricing-features color--black ico-10 ico--green mt-25">
-										<li><p><span class="flaticon-check"></span><?php echo $textos['price10']; ?>
+										<li><p><span class="flaticon-check"><?php echo $config['conexionesplan1']; ?>
 										 </p></li>
-										<li><p><span class="flaticon-check"></span><?php echo $textos['price11']; ?>
+										<li><p><span class="flaticon-check"></span><?php echo $config['agentesplan1']; ?>
 										 </p></li>
-										<li class="disabled-option"><p><span class="flaticon-check"></span><?php echo $textos['price12']; ?>
+										<li ><p><span class="flaticon-check"></span><?php echo $textos['price12']; ?>
 										 </p></li>
 										<li><p><span class="flaticon-check"></span><?php echo $textos['price13']; ?>
 										 </p></li>
@@ -255,9 +256,9 @@ $config = include('config.php');
 										</p></li>	
 										<li><p><span class="flaticon-check"></span><?php echo $textos['price15']; ?>
 										 </p></li>
-										 <li class="disabled-option"><p><span class="flaticon-check"></span><?php echo $textos['price16']; ?>
+										 <li ><p><span class="flaticon-check"></span><?php echo $textos['price16']; ?>
 										 </p></li>
-										 <li class="disabled-option"><p><span class="flaticon-check"></span><?php echo $textos['price17']; ?>
+										 <li ><p><span class="flaticon-check"></span><?php echo $textos['price17']; ?>
 										 </p></li>
 									</ul>
 								</div>
@@ -284,21 +285,21 @@ $config = include('config.php');
 												<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price19']; ?></sup>
 												<!-- Discount Badge -->
 												<div class="pricing-discount bg--yellow-400 color--black r-36">
-													<h6 class="s-17"><?php echo $textos['price20']; ?></h6>
+													<?php echo $config['plan2descuento']; ?></h6>
 												</div>
 											</div>
 											<!-- Text -->	
 											<p class="color--grey"><?php echo $textos['price21']; ?></p>
 										</div>	<!-- End Price -->	
 										<!-- Button -->
-										<a href="#" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price22']; ?></a>
+										<a href="<?php echo $config['domain_app']; ?>" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price8']; ?></a>
 										<p class="p-sm btn-txt text-center color--grey"><?php echo $textos['price23']; ?></p>	
 									</div>	<!-- END TABLE HEADER -->
 									<!-- PRICING FEATURES -->
 									<ul class="pricing-features color--black ico-10 ico--green mt-25">
-										<li><p><span class="flaticon-check"></span><?php echo $textos['price25']; ?>
+										<li><p><span class="flaticon-check"></span><?php echo $config['conexionesplan2']; ?>
 										 </p></li>
-										<li><p><span class="flaticon-check"></span><?php echo $textos['price26']; ?>
+										<li><p><span class="flaticon-check"></span><?php echo $config['agentesplan2']; ?>
 										 </p></li>
 										<li><p><span class="flaticon-check"></span><?php echo $textos['price27']; ?>
 										 </p></li>
@@ -338,21 +339,21 @@ $config = include('config.php');
 												<sup class="validity color--grey">&nbsp;/&ensp;<?php echo $textos['price19']; ?></sup>
 												<!-- Discount Badge -->
 												<div class="pricing-discount bg--yellow-400 color--black r-36">
-													<h6 class="s-17"><?php echo $textos['price33']; ?></h6>
+													<?php echo $config['plan3descuento']; ?></h6>
 												</div>
 											</div>
 											<!-- Text -->	
 											<p class="color--grey"><?php echo $textos['price34']; ?></p>
 										</div>	<!-- End Price -->	
 										<!-- Button -->
-										<a href="#" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price35']; ?></a>
+										<a href="<?php echo $config['domain_app']; ?>" class="pt-btn btn r-04 btn--theme hover--theme"><?php echo $textos['price8']; ?></a>
 										<p class="p-sm btn-txt text-center color--grey"><?php echo $textos['price36']; ?></p>	
 								</div>	<!-- END TABLE HEADER -->
 									<!-- PRICING FEATURES -->
 									<ul class="pricing-features color--black ico-10 ico--green mt-25">
-										<li><p><span class="flaticon-check"></span><?php echo $textos['price37']; ?>
+										<li><p><span class="flaticon-check"></span><?php echo $config['conexionesplan3']; ?>
 										 </p></li>
-										<li><p><span class="flaticon-check"></span><?php echo $textos['price38']; ?>
+										<li><p><span class="flaticon-check"></span><?php echo $config['agentesplan3']; ?>
 										 </p></li>
 										<li><p><span class="flaticon-check"></span><?php echo $textos['price39']; ?>
 										 </p></li>
@@ -393,118 +394,7 @@ $config = include('config.php');
 							</div>	
 						</div>
 					</div>
-					<!-- PRICING COMPARE -->
-					<div class="comp-table wow fadeInUp">
-						<div class="row">
-							<div class="col">
-								<!-- Table -->	
-	   							<div class="table-responsive mb-50">
-	     							<table class="table text-center">
-	        							<thead>
-									        <tr>
-									            <th style="width: 34%;"></th>
-									            <th style="width: 22%;"><?php echo $config['plan1name']; ?></th>
-									            <th style="width: 22%;"><?php echo $config['plan2name']; ?></th>
-									            <th style="width: 22%;"><?php echo $config['plan3name']; ?></th>
-									       	</tr>
-								        </thead>
-
-								        <tbody>
-
-									       	<tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price47']; ?></th>
-									            <td class="color--black"><?php echo $textos['price48']; ?></td>
-									            <td class="color--black"><?php echo $textos['price49']; ?></td>
-									            <td class="color--black"><?php echo $textos['price50']; ?></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price51']; ?></th>
-									            <td class="color--black"><?php echo $textos['price52']; ?></td>
-									            <td class="color--black"><?php echo $textos['price53']; ?></td>
-									            <td class="color--black"><?php echo $textos['price54']; ?></td>
-									        </tr>
-									        
-									         <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price55']; ?></th>
-									            <td class="disabled-option"><?php echo $textos['price56']; ?></td>
-									            <td class="color--black"><?php echo $textos['price57']; ?></td>
-									            <td class="color--black"><?php echo $textos['price58']; ?></td>
-									        </tr>
-    
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price59']; ?></th>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price60']; ?></th>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price61']; ?></th>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price62']; ?></th>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									       
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price63']; ?></th>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price64']; ?></th>
-									            <td class="ico-15 disabled-option"><span class="flaticon-cancel"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price65']; ?></th>
-									            <td class="ico-15 disabled-option"><span class="flaticon-cancel"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr>
-									            <th scope="row" class="text-start"><?php echo $textos['price66']; ?></th>
-									            <td class="ico-15 disabled-option"><span class="flaticon-cancel"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									            <td class="ico-20 color--theme"><span class="flaticon-check"></span></td>
-									        </tr>
-
-									        <tr class="table-last-tr">
-									            <th scope="row" class="text-start"><?php echo $textos['price67']; ?></th>
-									            <td class="color--black"><?php echo $textos['price68']; ?></td>
-									            <td class="color--black"><?php echo $textos['price69']; ?></td>
-									            <td class="color--black"><?php echo $textos['price70']; ?></td>
-									        </tr>
-
-								        </tbody>
-
-	      							</table>
-	   							</div>	<!-- End Table -->	
-
-							</div>
-						</div>
-					</div>	<!-- END PRICING COMPARE -->
+					
 
 					<!-- PRICING COMPARE PAYMENT -->
 					<div class="comp-table-payment">	
@@ -659,17 +549,20 @@ $config = include('config.php');
 								<h6 class="s-17 w-700"><?php echo $textos['footer11']; ?></h6>
 
 								<!-- Mail Link -->
-								<p class="footer-mail-link ico-25">
-									<a href="mailto:<?php echo $config['mail']; ?>" target="_blank"><?php echo $textos['mail']; ?></a>
-								</p>
+								
 
 								<!-- Social Links -->	
-								<ul class="footer-socials ico-25 text-center clearfix">		
-									<li><a href="<?php echo $config['facebook']; ?>" target="_blank"><span class="flaticon-facebook"></span></a></li>
-									<li><a href="<?php echo $config['twitter']; ?>" target="_blank"><span class="flaticon-twitter"></span></a></li>
-									<li><a href="<?php echo $config['github']; ?>" target="_blank"><span class="flaticon-github"></span></a></li>
+									<ul class="footer-socials ico-25 text-center clearfix">		
+									<li><a href="<?php echo $config['facebook']; ?>" target="_blank"><img src="/images/facebook.png" alt="facebook" width="25" height="25"></a></li>
+									<li><a href="<?php echo $config['instagram']; ?>" target="_blank"><img src="/images/instagram.png" alt="instagram" width="25" height="25"></a></li>
+									<li><a href="<?php echo $config['youtube']; ?>" target="_blank"><img src="/images/youtube.png" alt="youtube" width="25" height="25"></a>
+									</li>
+									<li><a href="<?php echo $config['tiktok']; ?>" target="_blank"><img src="/images/tik-tok.png" alt="TikTok" width="25" height="25"></a>
+									</li>
+
 									
 								</ul>
+
 
 							</div>	
 						</div>	<!-- END FOOTER LINKS -->	
@@ -680,15 +573,15 @@ $config = include('config.php');
 						<div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
 							<div class="col">
 								<div class="footer-copyright">
-									<p class="p-sm">&copy; 2024 <?php echo $textos['namesite']; ?>. <span><?php echo $textos['copy']; ?></span></p><br>
+									<p class="p-sm">&copy; 2024 <?php echo $config['namesite']; ?>. <span><?php echo $textos['copy']; ?></span></p><br>
 								
 								</div>
 							</div>
 							<!-- FOOTER SECONDARY LINK -->
 							<div class="col">
 								<div class="bottom-secondary-link ico-15 text-end">
-									<p class="p-sm"><a href="#"><?php echo $textos['madein']; ?>Hecho con 
-										<span class="flaticon-heart color--pink-400"></span> por <?php echo $textos['developer']; ?></a><br>
+									<p class="p-sm"><a href="#"><?php echo $textos['madein']; ?> 
+										<span class="flaticon-heart color--pink-400"></span> <?php echo $textos['developer']; ?><?php echo $config['namesite']; ?></a><br>
 									</p>
 								</div>
 							</div>

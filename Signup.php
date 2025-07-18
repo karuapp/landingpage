@@ -54,12 +54,12 @@ $config = include('config.php');
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="WhaTitan.com"> 
-        <meta name="description" content="<?php echo $textos['namesite']; ?> <?php echo $textos['description']; ?>">
+        <meta name="description" content="<?php echo $config['namesite']; ?> <?php echo $textos['description']; ?>">
         <meta name="keywords" content="<?php echo $textos['keywords']; ?>"> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
                 
         <!-- SITE TITLE -->
-        <title><?php echo $textos['namesite']; ?> <?php echo $textos['titulo']; ?></title>
+        <title><?php echo $config['namesite']; ?> <?php echo $textos['titulo']; ?></title>
                             
         <!-- FAVICON AND TOUCH ICONS -->
         <link rel="shortcut icon" href="images/square-logo.png" type="">
@@ -351,7 +351,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 
                                             <!-- Copyright -->
                                             <div class="register-page-copyright">
-                                                <p class="p-sm">&copy; Copyright © 2025 <?php echo $textos['namesite']; ?> <span>All Rights Reserved</span></p>
+                                                <p class="p-sm">&copy; Copyright © 2025 <?php echo $config['namesite']; ?> <span>All Rights Reserved</span></p>
                                             </div>
 
                                         </div>

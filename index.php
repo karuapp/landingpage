@@ -50,12 +50,12 @@ $config = include('config.php');
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="author" content="WhaTitan.com">	
-		<meta name="description" content="<?php echo $textos['namesite']; ?> <?php echo $textos['description']; ?>">
+		<meta name="description" content="<?php echo $config['namesite']; ?> <?php echo $textos['description']; ?>">
 		<meta name="keywords" content="<?php echo $textos['keywords']; ?>">	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 				
   		<!-- SITE TITLE -->
-		<title><?php echo $textos['namesite']; ?> <?php echo $textos['titulo']; ?></title>
+		<title><?php echo $config['namesite']; ?> <?php echo $textos['titulo']; ?></title>
 							
 		<!-- FAVICON AND TOUCH ICONS -->
 		<link rel="shortcut icon" href="images/square-logo.png" type="">
@@ -216,7 +216,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
             overflow: hidden;
             font-size: 20px; /* Cambia esto al tamaño que desees */
     font-weight: bold; /* Opcional para negritas */
-    color: #7946d1; /* Opcional para cambiar el color del texto */
+    color: #6F5AA3; /* Opcional para cambiar el color del texto */
         }
 
         /* Animation for erasing text */
@@ -337,8 +337,13 @@ li[aria-haspopup="true"]:hover .sub-menu {
 									 <span class="color--theme"><?php echo $textos['tittle1']; ?></span> <?php echo $textos['tittle2']; ?>
 								</h2>
 								<!-- Text -->
-								<p class="p-xl"><?php echo $textos['subtittle1']; ?> <span class="color--black"><?php echo $textos['namesite']; ?></span>  <?php echo $textos['subtittle2']; ?>
+								<p class="p-xl"><?php echo $textos['subtittle1']; ?> <span class="color--black"><?php echo $config['namesite']; ?></span>  <?php echo $textos['subtittle2']; ?>
 								</p>
+
+
+
+
+
 								<!-- Buttons -->	
 									<div class="btns-group">
 										<a href="<?php echo $config['domain_signup']; ?>" class="btn r-04 btn--theme hover--theme" target="_blank"><?php echo $textos['button1']; ?></a>
@@ -349,21 +354,31 @@ li[aria-haspopup="true"]:hover .sub-menu {
 							</div>
 						</div>
 					</div>	<!--END HERO TEXT -->	
-					<!-- HERO IMAGE -->
-					<div class="row">
-						<div class="col">	
-							<div class="hero-23-img video-preview wow fadeInUp">
-								<!-- Play Icon  --> 
-								<a class="video-popup1" href="<?php echo $config['youtube']; ?>" >				
-									<div class="video-btn video-btn-xl bg--theme">	
-										<div class="video-block-wrapper"><span class="flaticon-play-button"></span></div>
+									<!-- HERO IMAGE -->
+									<div class="row">
+										<div class="col">	
+											<div class="hero-23-img video-preview wow fadeInUp" style="position: relative;">
+
+												<!-- Imagen de fondo o previa del video -->
+												<img class="img-fluid" src="images/dashboard-03.png" alt="video-preview">
+
+												<!-- Solo mostramos el botón de play si videoyoutube está activado -->
+												<?php if (isset($config['videoyoutube']) && $config['videoyoutube'] === 'true'): ?>
+													<!-- Botón de reproducir el video (abre enlace de YouTube en popup) -->
+													<a class="video-popup1" href="<?php echo htmlspecialchars($config['youtubevideo'], ENT_QUOTES, 'UTF-8'); ?>" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+														<div class="video-btn video-btn-xl bg--theme">	
+															<div class="video-block-wrapper">
+																<span class="flaticon-play-button"></span>
+															</div>
+														</div>
+													</a>
+												<?php endif; ?>
+
+											</div>
+										</div>	
 									</div>
-								</a> 
-								<!-- Preview Image --> 
-								<img class="img-fluid" src="images/dashboard-03.png" alt="video-preview">	
-							</div>
-						</div>	
-					</div>	<!-- END HERO IMAGE -->
+									<!-- END HERO IMAGE -->
+
 				</div>	   <!-- End container --> 	
 				<!-- WAVE SHAPE BOTTOM -->	
 				<div class="wave-shape-bottom">
@@ -608,7 +623,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
                                                                     <!-- Title -->
                                                                     <h4 class="s-50 w-700">Potencia tus Llamadas de WhatsApp con Wavoip</h4>
                                                                     <!-- Text -->
-                                                                    <p class="s-18 color--grey">Descubre cómo nuestra integración Wavoip te permite realizar llamadas de voz directamente desde <?php echo $textos['namesite']; ?>, facilitando la comunicación con tus clientes de manera práctica, rápida y sin salir de  <?php echo $textos['namesite']; ?>.</p>
+                                                                    <p class="s-18 color--grey">Descubre cómo nuestra integración Wavoip te permite realizar llamadas de voz directamente desde <?php echo $config['namesite']; ?>, facilitando la comunicación con tus clientes de manera práctica, rápida y sin salir de  <?php echo $config['namesite']; ?>.</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -638,7 +653,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
             <div class="col-md-10 col-lg-9">
                 <div class="section-title mb-70">
                     <!-- Title -->
-                    <h4 class="s-50 w-700"><?php echo $textos['featuretitle']; ?> <?php echo $textos['namesite']; ?></h4>
+                    <h4 class="s-50 w-700"><?php echo $textos['featuretitle']; ?> <?php echo $config['namesite']; ?></h4>
                     <!-- Text -->
                     <p class="s-18 color--grey"><?php echo $textos['featuretitle2']; ?></p>
                 </div>
@@ -1015,12 +1030,12 @@ li[aria-haspopup="true"]:hover .sub-menu {
 								<!-- Section ID -->	
 						 		<span class="section-id color--grey"><?php echo $textos['maximatittle']; ?></span>
 								<!-- Title -->	
-								<h2 class="s-46 w-700"><?php echo $textos['namesite']; ?> <?php echo $textos['maximasubtittle']; ?> </h2>
+								<h2 class="s-46 w-700"><?php echo $config['namesite']; ?> <?php echo $textos['maximasubtittle']; ?> </h2>
 								<!-- Text -->	
 								<p><?php echo $textos['maximatext']; ?>
 								</p>
 								<!-- Text -->	
-								<p class="mb-0"><?php echo $textos['maximatext2']; ?> <?php echo $textos['namesite']; ?>, <?php echo $textos['maximatext3']; ?> <?php echo $textos['namesite']; ?>!
+								<p class="mb-0"><?php echo $textos['maximatext2']; ?> <?php echo $config['namesite']; ?>, <?php echo $textos['maximatext3']; ?> <?php echo $config['namesite']; ?>!
 								</p>
 								<!-- Link -->	
 								<div class="txt-block-tra-link mt-25">
@@ -1230,7 +1245,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 								<!-- Title -->	
 								<h2 class="s-50 w-700"><?php echo $textos['campaning']; ?></h2>	
 								<!-- Text -->	
-								<p class="s-21 color--grey"><?php echo $textos['campaning2']; ?> <?php echo $textos['namesite']; ?> <?php echo $textos['campaning3']; ?></p>
+								<p class="s-21 color--grey"><?php echo $textos['campaning2']; ?> <?php echo $config['namesite']; ?> <?php echo $textos['campaning3']; ?></p>
 							</div>	
 						</div>
 					</div>
@@ -1451,7 +1466,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 								<div class="col-md-8">
 									<div class="banner-7-txt text-center">
 										<!-- Title -->	
-										<h2 class="s-50 w-700"><?php echo $textos['empezar']; ?> <?php echo $textos['namesite']; ?> <?php echo $textos['empezar2']; ?></h2>
+										<h2 class="s-50 w-700"><?php echo $textos['empezar']; ?> <?php echo $config['namesite']; ?> <?php echo $textos['empezar2']; ?></h2>
 										<!-- Buttons -->
 										<div class="btns-group">
 											<a href="<?php echo $config['domain_signup']; ?>" class="btn r-04 btn--theme hover--theme"><?php echo $textos['actionregister']; ?>
@@ -1486,7 +1501,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 									<li class="accordion-item ">
 										<!-- CATEGORY HEADER -->
 										<div class="accordion-thumb">
-											<h4 class="s-28 w-700"><?php echo $textos['aprovecha']; ?> <?php echo $textos['namesite']; ?></h4>
+											<h4 class="s-28 w-700"><?php echo $textos['aprovecha']; ?> <?php echo $config['namesite']; ?></h4>
 										</div>
 										<!-- CATEGORY ANSWERS -->
 										<div class="accordion-panel">
@@ -1499,7 +1514,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 												<!--Answer -->	
 												<div class="faqs-2-answer color--grey">
 													<!-- Text -->
-													<p><?php echo $textos['respuesta1']; ?> <?php echo $textos['namesite']; ?>, <?php echo $textos['respuesta12']; ?>
+													<p><?php echo $textos['respuesta1']; ?> <?php echo $config['namesite']; ?>, <?php echo $textos['respuesta12']; ?>
 													</p>
 												</div>
 											</div>	<!-- END QUESTION #1 -->
@@ -1518,12 +1533,12 @@ li[aria-haspopup="true"]:hover .sub-menu {
 											<div class="accordion-panel-item mb-35">
 												<!-- Question -->	
 												<div class="faqs-2-question">
-													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta2']; ?> <?php echo $textos['namesite']; ?>?</h5>
+													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta2']; ?> <?php echo $config['namesite']; ?>?</h5>
 												</div>
 												<!-- Answer -->	
 												<div class="faqs-2-answer color--grey">
 													<!-- Text -->
-													<p> <?php echo $textos['respuesta21']; ?> <?php echo $textos['namesite']; ?> <?php echo $textos['respuesta212']; ?>
+													<p> <?php echo $textos['respuesta21']; ?> <?php echo $config['namesite']; ?> <?php echo $textos['respuesta212']; ?>
 													</p>
 												</div>
 											</div>	<!-- END QUESTION #2 -->
@@ -1542,13 +1557,13 @@ li[aria-haspopup="true"]:hover .sub-menu {
 											<div class="accordion-panel-item mb-35">
 												<!-- Question -->	
 												<div class="faqs-2-question">
-													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta3']; ?> <?php echo $textos['namesite']; ?>
+													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta3']; ?> <?php echo $config['namesite']; ?>
 													<?php echo $textos['respuesta32']; ?></h5>
 												</div>
 												<!-- Answer -->	
 												<div class="faqs-2-answer color--grey">
 													<!-- Text -->
-													<p> <?php echo $textos['respuesta323']; ?> <?php echo $textos['namesite']; ?> <?php echo $textos['respuesta3234']; ?></p>
+													<p> <?php echo $textos['respuesta323']; ?> <?php echo $config['namesite']; ?> <?php echo $textos['respuesta3234']; ?></p>
 												</div>
 											</div>	<!-- END QUESTION #3 -->
 										</div>	<!-- END CATEGORY ANSWERS -->
@@ -1558,7 +1573,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 									<li class="accordion-item">
 										<!-- CATEGORY HEADER -->
 										<div class="accordion-thumb">
-											<h4 class="s-28 w-700"><?php echo $textos['pregunta4']; ?> <?php echo $textos['namesite']; ?></h4>
+											<h4 class="s-28 w-700"><?php echo $textos['pregunta4']; ?> <?php echo $config['namesite']; ?></h4>
 										</div>
 										<!-- CATEGORY ANSWERS -->
 										<div class="accordion-panel">
@@ -1566,12 +1581,12 @@ li[aria-haspopup="true"]:hover .sub-menu {
 											<div class="accordion-panel-item mb-35">
 												<!-- Question -->	
 												<div class="faqs-2-question">
-													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta4']; ?> <?php echo $textos['namesite']; ?>?</h5>
+													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta4']; ?> <?php echo $config['namesite']; ?>?</h5>
 												</div>
 												<!-- Answer -->	
 												<div class="faqs-2-answer color--grey">
 													<!-- Text -->
-													<p><?php echo $textos['respuesta1']; ?> <?php echo $textos['namesite']; ?>, <?php echo $textos['respuesta42']; ?> 
+													<p><?php echo $textos['respuesta1']; ?> <?php echo $config['namesite']; ?>, <?php echo $textos['respuesta42']; ?> 
 													</p>
 												</div>
 											</div>	<!-- END QUESTION #4 -->
@@ -1582,7 +1597,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 									<li class="accordion-item">
 										<!-- CATEGORY HEADER -->
 										<div class="accordion-thumb">
-											<h4 class="s-28 w-700"> <?php echo $textos['pregunta5']; ?> <?php echo $textos['namesite']; ?>?</h4>
+											<h4 class="s-28 w-700"> <?php echo $textos['pregunta5']; ?> <?php echo $config['namesite']; ?>?</h4>
 										</div>
 										<!-- CATEGORY ANSWERS -->
 										<div class="accordion-panel">
@@ -1590,12 +1605,12 @@ li[aria-haspopup="true"]:hover .sub-menu {
 											<div class="accordion-panel-item mb-35">
 												<!-- Question -->	
 												<div class="faqs-2-question">
-													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta52']; ?> <?php echo $textos['namesite']; ?> <?php echo $textos['respuesta523']; ?></h5>
+													<h5 class="s-22 w-700"><span>1.</span> <?php echo $textos['respuesta52']; ?> <?php echo $config['namesite']; ?> <?php echo $textos['respuesta523']; ?></h5>
 												</div>
 												<!-- Answer -->	
 												<div class="faqs-2-answer color--grey">
 													<!-- Text -->
-													<p> <?php echo $textos['pregunta6']; ?> <?php echo $textos['namesite']; ?> <?php echo $textos['respuesta6']; ?></p>
+													<p> <?php echo $textos['pregunta6']; ?> <?php echo $config['namesite']; ?> <?php echo $textos['respuesta6']; ?></p>
 												</div>
 											</div>	<!-- END QUESTION #5 -->
 										</div>	<!-- END CATEGORY ANSWERS -->
@@ -1681,9 +1696,13 @@ li[aria-haspopup="true"]:hover .sub-menu {
 
 								<!-- Social Links -->	
 								<ul class="footer-socials ico-25 text-center clearfix">		
-									<li><a href="<?php echo $config['facebook']; ?>" target="_blank"><span class="flaticon-facebook"></span></a></li>
-									<li><a href="<?php echo $config['twitter']; ?>" target="_blank"><span class="flaticon-twitter"></span></a></li>
-									<li><a href="<?php echo $config['github']; ?>" target="_blank"><span class="flaticon-github"></span></a></li>
+									<li><a href="<?php echo $config['facebook']; ?>" target="_blank"><img src="/images/facebook.png" alt="facebook" width="25" height="25"></a></li>
+									<li><a href="<?php echo $config['instagram']; ?>" target="_blank"><img src="/images/instagram.png" alt="instagram" width="25" height="25"></a></li>
+									<li><a href="<?php echo $config['youtube']; ?>" target="_blank"><img src="/images/youtube.png" alt="youtube" width="25" height="25"></a>
+									</li>
+									<li><a href="<?php echo $config['tiktok']; ?>" target="_blank"><img src="/images/tik-tok.png" alt="TikTok" width="25" height="25"></a>
+									</li>
+
 									
 								</ul>
 
@@ -1696,7 +1715,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 						<div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
 							<div class="col">
 								<div class="footer-copyright">
-									<p class="p-sm">&copy; 2024 <?php echo $textos['namesite']; ?>.  <span><?php echo $textos['copy']; ?></span></p><br>
+									<p class="p-sm">&copy; 2024 <?php echo $config['namesite']; ?>.  <span><?php echo $textos['copy']; ?></span></p><br>
 								
 								</div>
 							</div>
@@ -1704,7 +1723,7 @@ li[aria-haspopup="true"]:hover .sub-menu {
 							<div class="col">
 								<div class="bottom-secondary-link ico-15 text-end">
 									<p class="p-sm"><a href="#"><?php echo $textos['madein']; ?> 
-										<span class="flaticon-heart color--pink-400"></span> <?php echo $textos['developer']; ?><?php echo $textos['namesite']; ?></a><br>
+										<span class="flaticon-heart color--pink-400"></span> <?php echo $textos['developer']; ?><?php echo $config['namesite']; ?></a><br>
 									</p>
 								</div>
 							</div>
@@ -1749,18 +1768,10 @@ li[aria-haspopup="true"]:hover .sub-menu {
 			})();
 		</script>
 		<script>
-		    $('.video-popup1').magnificPopup({
-		    type: 'iframe',		  	  
-				iframe: {
-					patterns: {
-						youtube: {			   
-							index: 'youtube.com',
-							src: 'https://www.youtube.com/embed/UtijXkcq3GA?si=c0CvgxjwPYZWmIzG'				
-								}
-							}
-						}		  		  
-		});
-		</script>
+			$('.video-popup1').magnificPopup({
+				type: 'iframe'
+			});
+			</script>
 		<script>
         let words = [
             "<?php echo $textos['textanimation1']; ?>",

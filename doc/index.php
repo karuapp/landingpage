@@ -47,7 +47,7 @@ $config = include('../config.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Documentation">
     <meta name="author" content=" ">
-    <title><?php echo $textos['documentacion']; ?> <?php echo $textos['namesite']; ?></title>
+    <title><?php echo $textos['documentacion']; ?> <?php echo $config['namesite']; ?></title>
     <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="assets/css/site.css" id="stylesheet">
     <link rel="stylesheet" href="assets/css/docs.css">
@@ -155,7 +155,7 @@ $config = include('../config.php');
     <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <?php echo $textos['documentacion']; ?> <?php echo $textos['namesite']; ?>
+                <?php echo $textos['documentacion']; ?> <?php echo $config['namesite']; ?>
             </a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -503,8 +503,8 @@ $config = include('../config.php');
 
                      <hr class="divider divider-fade">
                     <h2 id="configuracion-inicial"><?php echo $textos['doc74']; ?></h2>
-                    <p><b><?php echo $textos['doc75']; ?> <?php echo $textos['namesite']; ?> </b></p>
-                    <li class="pb-1"><?php echo $textos['doc76']; ?> <a href="<?php echo $config['domain_app']; ?>settings" target="_blank"><?php echo $textos['doc77']; ?></a> <?php echo $textos['doc78']; ?> <?php echo $textos['namesite']; ?>.</li>
+                    <p><b><?php echo $textos['doc75']; ?> <?php echo $config['namesite']; ?> </b></p>
+                    <li class="pb-1"><?php echo $textos['doc76']; ?> <a href="<?php echo $config['domain_app']; ?>settings" target="_blank"><?php echo $textos['doc77']; ?></a> <?php echo $textos['doc78']; ?> <?php echo $config['namesite']; ?>.</li>
                     <p><img src="assets/img/03.PNG" alt="logo" style="width: 70%" class="sombra"></p>
                     <hr class="divider divider-fade">
                     <p><b><?php echo $textos['doc79']; ?></b></p>
@@ -520,7 +520,7 @@ $config = include('../config.php');
                     <p><b><?php echo $textos['doc82']; ?></b></p>
                     <li class="pb-1">1. <strong><?php echo $textos['doc83']; ?></strong> <?php echo $textos['doc84']; ?> </li>
                     <li class="pb-1">2. <strong><?php echo $textos['doc85']; ?></strong> <?php echo $textos['doc86']; ?></li>
-                    <li class="pb-1">3. <strong><?php echo $textos['doc87']; ?></strong><?php echo $textos['idoc88']; ?>  <?php echo $textos['namesite']; ?> <?php echo $textos['doc89']; ?></li>
+                    <li class="pb-1">3. <strong><?php echo $textos['doc87']; ?></strong><?php echo $textos['idoc88']; ?>  <?php echo $config['namesite']; ?> <?php echo $textos['doc89']; ?></li>
                     <li class="pb-1">4. <strong><?php echo $textos['doc90']; ?></strong> <?php echo $textos['doc91']; ?></li>
                     <li class="pb-1">5. <strong><?php echo $textos['doc92']; ?></strong> <?php echo $textos['doc93']; ?></li>
                     <li class="pb-1">6. <strong><?php echo $textos['doc94']; ?></strong> <?php echo $textos['doc95']; ?>.</li>
@@ -664,10 +664,10 @@ $config = include('../config.php');
                      <hr class="divider divider-fade">
                      
                      <h2 id="recargar-membresia"><?php echo $textos['doc234']; ?></h2>
-                    <p><b><?php echo $textos['doc235']; ?> <?php echo $textos['namesite']; ?></b></p>
+                    <p><b><?php echo $textos['doc235']; ?> <?php echo $config['namesite']; ?></b></p>
                     <li class="pb-1"><?php echo $textos['doc236']; ?> <a href="https://api.whatsapp.com/send/?phone=<?php echo $config['whatsapp_number']; ?>&text&type=phone_number&app_absent=0" target="_blank"><?php echo $textos['doc237']; ?></a> <?php echo $textos['doc238']; ?></li>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong>:  <?php echo $textos['doc239']; ?> <?php echo $textos['namesite']; ?>
+                        <strong><?php echo $textos['doc70']; ?></strong>:  <?php echo $textos['doc239']; ?> <?php echo $config['namesite']; ?>
                     </div>
                      <hr class="divider divider-fade">
                      
@@ -851,7 +851,7 @@ $config = include('../config.php');
                       final String url = '<?php echo $config['domain_api']; ?>api/messages/send';
                       final String token = 'Bearer 123456789';
                       final String number = '<?php echo $config['whatsapp_number']; ?>';
-                      final String body = '<?php echo $textos['namesite']; ?>';
+                      final String body = '<?php echo $config['namesite']; ?>';
                     
                       final Map<String, String> data = {
                         'number': number,
@@ -1193,7 +1193,7 @@ $config = include('../config.php');
                     <li class="pb-1"><?php echo $textos['doc349']; ?></li>
                     <li class="pb-1"><?php echo $textos['doc350']; ?></li>
                     <li class="pb-1"><?php echo $textos['doc351']; ?> </li>
-                    <li class="pb-1"><?php echo $textos['doc352']; ?> <?php echo $textos['namesite']; ?> </li>
+                    <li class="pb-1"><?php echo $textos['doc352']; ?> <?php echo $config['namesite']; ?> </li>
                     <li class="pb-1"><?php echo $textos['doc353']; ?></li>
                     <li class="pb-1"><?php echo $textos['doc354']; ?> </li>
                     <p><img src="assets/img/63.PNG" alt="logo" style="width: 75%" class="sombra"></p>
@@ -1272,7 +1272,7 @@ $config = include('../config.php');
 
 
                      
-                     <!--h2 id="email-marketing"><?php echo $textos['namesite']; ?>Email Marketing</h2>
+                     <!--h2 id="email-marketing"><?php echo $config['namesite']; ?>Email Marketing</h2>
                     <p><b></b></p>
                     <li class="pb-1">El modulo de envio Email Marketing es una version simple de envio que sera mejorada y escalada en el futuro pero que actualmente cumple funciones increibles.</li>
                     <li class="pb-1">Para iniciar debes ir a la seccion Marketing en tu menu lateral izquierdo y desplegar el menu Email </li>
@@ -1296,77 +1296,77 @@ $config = include('../config.php');
                     
                     <hr class="divider divider-fade"-->
                      
-                     <h2 id="open"><?php echo $textos['namesite']; ?>Open Ai</h2>
+                     <h2 id="open"><?php echo $config['namesite']; ?>Open Ai</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
                     <p><img src="assets/img/62.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <p><img src="assets/img/62.1.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $textos['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
+                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $config['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
                     </div>
                     
                     <hr class="divider divider-fade">
                      
-                     <h2 id="dialogflow"><?php echo $textos['namesite']; ?>DialogFlow</h2>
+                     <h2 id="dialogflow"><?php echo $config['namesite']; ?>DialogFlow</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
                     <p><img src="assets/img/62.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <p><img src="assets/img/62.1.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $textos['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
+                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $config['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
                     </div>
                     
                     <hr class="divider divider-fade">
                      
                      <h2 id="n8n">N8N</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
                     <p><img src="assets/img/62.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <p><img src="assets/img/62.1.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $textos['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
+                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $config['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
                     </div>
                     
                     <hr class="divider divider-fade">
                      
-                     <h2 id="webhooks"><?php echo $textos['namesite']; ?>WebHooks</h2>
+                     <h2 id="webhooks"><?php echo $config['namesite']; ?>WebHooks</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
                     <p><img src="assets/img/62.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <p><img src="assets/img/62.1.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $textos['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
+                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $config['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
                     </div>
                     
                     <hr class="divider divider-fade">
                      
-                     <h2 id="typebot"><?php echo $textos['namesite']; ?>TypeBot</h2>
+                     <h2 id="typebot"><?php echo $config['namesite']; ?>TypeBot</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>El modulo Dashboard es una seccion exclusiva para el administrador donde podra encontrar informacion como</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>1. Informacion y el vencimiento de la membresia </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>2. Una grafica de las conversaciones del dia segmentadas por horas </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>3. Filtros de metricas como mensajes pendientes, mensajes atendiendose, mensajes finalizados, nuevos contactos, tiempo de promedio de atencion, tiempo promedio de espera. </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
                     <p><img src="assets/img/62.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <p><img src="assets/img/62.1.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $textos['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
+                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $config['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
                     </div>
 
 
@@ -1400,51 +1400,51 @@ $config = include('../config.php');
 
                     <li class="pb-1"><?php echo $textos['doc407']; ?> </li>
                     <p><img src="assets/img/flujo6.PNG" alt="logo" style="width: 100%" class="sombra"></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>4. Una lista de los agentes donde se muestra las metricas de su atencion o calificacion de los clientes tiempo promedio de atencion su estatus </li>
                     <p><img src="assets/img/flujo6.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <p><img src="assets/img/flujo6.1.PNG" alt="logo" style="width: 100%" class="sombra"></p>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $textos['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
+                        <strong><?php echo $textos['doc70']; ?></strong> :  <?php echo $config['namesite']; ?>para que las conversaciones reciban calificaciones debes activar esta opcion desde el modulo de configuraciones
                     </div>
                     
                     
                     
                      <hr class="divider divider-fade">
                      
-                     <h2 id="condiciones"><?php echo $textos['namesite']; ?>Condiciones De Uso</h2>
+                     <h2 id="condiciones"><?php echo $config['namesite']; ?>Condiciones De Uso</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>Condiciones De Uso <a href=""><?php echo $textos['namesite']; ?>Tu perfil</a>  .</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>Condiciones De Uso <a href=""><?php echo $config['namesite']; ?>Tu perfil</a>  .</li>
                     
                      <hr class="divider divider-fade">
                      
-                     <h2 id="politicas"><?php echo $textos['namesite']; ?>Politicas de Privacidad</h2>
+                     <h2 id="politicas"><?php echo $config['namesite']; ?>Politicas de Privacidad</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>Politicas de Privacidad<a href=""><?php echo $textos['namesite']; ?>Tu perfil</a>  .</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>Politicas de Privacidad<a href=""><?php echo $config['namesite']; ?>Tu perfil</a>  .</li>
                 
                      <hr class="divider divider-fade">
                      
-                     <h2 id="cookies"><?php echo $textos['namesite']; ?>Politicas de Cookies</h2>
+                     <h2 id="cookies"><?php echo $config['namesite']; ?>Politicas de Cookies</h2>
                     <p><b></b></p>
-                    <li class="pb-1"><?php echo $textos['namesite']; ?>Politicas de Cookies <a href=""><?php echo $textos['namesite']; ?>Tu perfil</a>  .</li>
+                    <li class="pb-1"><?php echo $config['namesite']; ?>Politicas de Cookies <a href=""><?php echo $config['namesite']; ?>Tu perfil</a>  .</li>
                     
                      <hr class="divider divider-fade">
                      
                      
-                     <h2 id="variables"><?php echo $textos['namesite']; ?>Variables Disponibles</h2>
+                     <h2 id="variables"><?php echo $config['namesite']; ?>Variables Disponibles</h2>
                      <p><img src="assets/img/51.PNG" alt="logo" style="width: 100%" class="sombra"></p>
-                    <p><b><?php echo $textos['namesite']; ?>Las variables te permiten insertar pequeños fracmentos de codigo con un clic dentro de textos para el envio de mensajes</b></p>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Primer Nombre</code> <?php echo $textos['namesite']; ?>Inserta el primer nombre guardado del contacto o el primer nombre que el contacto tenga en su perfil.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Nombre</code> <?php echo $textos['namesite']; ?>Inserta el nombre completo guardado del contacto o el primer nombre que el contacto tenga en su perfil.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Agente</code> I<?php echo $textos['namesite']; ?>nserta el nombre del agente u operador que esta enviando el mensaje.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Saludo</code> <?php echo $textos['namesite']; ?>Inserta un saludos automaticamente dependiendo del horario local puede ser Buen dia, buenas tarde, buenas noches.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Protocolo</code> <?php echo $textos['namesite']; ?>Inserta Esta funcion es util para automatizar ya que envia una sertie de numeros que hacen alucion a fecha, hora, chat id dando como resultado un numero de 12 digitos o mas que sera diferente en cada mensaje.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Fecha</code> <?php echo $textos['namesite']; ?>Inserta la fecha actual en el mensaej.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Hora</code> <?php echo $textos['namesite']; ?>Inserta la hora actual.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Nº de Conversacion</code> Inserta el Id del chat room de cada conversacion.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Departamentos</code> <?php echo $textos['namesite']; ?>Inserta el nombre del departamento al que el chat esta asignado.</li>
-                    <li class="pb-1"><code class="badge badge-info"><?php echo $textos['namesite']; ?>Conexión</code> <?php echo $textos['namesite']; ?>Inserta el nombre de la conexion que el administrador asigno a la cuenta de WhatsApp.</li>
+                    <p><b><?php echo $config['namesite']; ?>Las variables te permiten insertar pequeños fracmentos de codigo con un clic dentro de textos para el envio de mensajes</b></p>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Primer Nombre</code> <?php echo $config['namesite']; ?>Inserta el primer nombre guardado del contacto o el primer nombre que el contacto tenga en su perfil.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Nombre</code> <?php echo $config['namesite']; ?>Inserta el nombre completo guardado del contacto o el primer nombre que el contacto tenga en su perfil.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Agente</code> I<?php echo $config['namesite']; ?>nserta el nombre del agente u operador que esta enviando el mensaje.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Saludo</code> <?php echo $config['namesite']; ?>Inserta un saludos automaticamente dependiendo del horario local puede ser Buen dia, buenas tarde, buenas noches.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Protocolo</code> <?php echo $config['namesite']; ?>Inserta Esta funcion es util para automatizar ya que envia una sertie de numeros que hacen alucion a fecha, hora, chat id dando como resultado un numero de 12 digitos o mas que sera diferente en cada mensaje.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Fecha</code> <?php echo $config['namesite']; ?>Inserta la fecha actual en el mensaej.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Hora</code> <?php echo $config['namesite']; ?>Inserta la hora actual.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Nº de Conversacion</code> Inserta el Id del chat room de cada conversacion.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Departamentos</code> <?php echo $config['namesite']; ?>Inserta el nombre del departamento al que el chat esta asignado.</li>
+                    <li class="pb-1"><code class="badge badge-info"><?php echo $config['namesite']; ?>Conexión</code> <?php echo $config['namesite']; ?>Inserta el nombre de la conexion que el administrador asigno a la cuenta de WhatsApp.</li>
                     <div class="alert alert-danger">
-                        <strong><?php echo $textos['doc70']; ?></strong> : <?php echo $textos['namesite']; ?>Sin no tienes guardado al contacto y el contacto no configuro su nombre en su aplicacion de whatsapp el sistema tomara el contenido del nick del usaurio esto podria ser emojis, o cualquier informacion que el cliente tenga en el nick de su cuenta de whastapp
+                        <strong><?php echo $textos['doc70']; ?></strong> : <?php echo $config['namesite']; ?>Sin no tienes guardado al contacto y el contacto no configuro su nombre en su aplicacion de whatsapp el sistema tomara el contenido del nick del usaurio esto podria ser emojis, o cualquier informacion que el cliente tenga en el nick de su cuenta de whastapp
                     </div>
                      <hr class="divider divider-fade">
                     
